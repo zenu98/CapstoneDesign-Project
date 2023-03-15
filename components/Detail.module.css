@@ -1,0 +1,15 @@
+.project-info {
+  display: flex;
+  background-color: antiquewhite;
+  margin-top: 200px;
+  width: 100%;
+  height: 500px;
+}
+.info-one {
+  width: 50%;
+  padding: 0 0.938rem;
+}
+.info-two {
+  width: 50%;
+  padding: 0 0.938rem;
+}

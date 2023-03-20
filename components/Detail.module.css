@@ -1,15 +1,47 @@
-.project-info {
+.container {
+  padding: 0 0.938rem;
+}
+
+.introContainer {
   display: flex;
-  background-color: antiquewhite;
-  margin-top: 200px;
+  flex-wrap: wrap;
+  margin-top: 25vh;
   width: 100%;
   height: 500px;
 }
-.info-one {
-  width: 50%;
-  padding: 0 0.938rem;
+.title {
+  font-size: 3.625rem;
+  line-height: 3.8rem;
+  letter-spacing: -0.125rem;
 }
-.info-two {
-  width: 50%;
-  padding: 0 0.938rem;
+.title span {
+  margin-left: 1rem;
+  color: #a7a7a7;
+}
+.text {
+  font-family: "Pretendard-Regular";
+  font-size: 1.25rem;
+  line-height: 1.925rem;
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 47.5em) {
+  .introBox-left {
+    width: 50%;
+    padding: 0 0.938rem;
+  }
+  .introBox-right {
+    width: 50%;
+    padding: 0 0.938rem;
+  }
+}
+
+.introBox-right p {
+  margin-top: 4rem;
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff")
+    format("woff");
+  font-weight: 600;
+  font-style: normal;
 }

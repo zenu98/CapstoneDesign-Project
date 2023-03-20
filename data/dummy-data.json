@@ -1,0 +1,19 @@
+{
+  "clients": [
+    {
+      "id": "c1",
+      "name": "김가영",
+      "description": "김가영님의 작품"
+    },
+    {
+      "id": "c2",
+      "name": "김미르",
+      "description": "김미르님의 작품"
+    },
+    {
+      "id": "c3",
+      "name": "최고운",
+      "description": "최고운님의 작품"
+    }
+  ]
+}

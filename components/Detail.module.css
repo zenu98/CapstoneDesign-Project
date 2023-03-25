@@ -1,15 +1,33 @@
 .container {
+  background-color: white;
+
+  position: relative;
   padding: 0 0.938rem;
 }
 
+.imgone {
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 92vh;
+  border-radius: 10px;
+}
+
+.background {
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 95vh;
+}
+
 .introContainer {
-  display: flex;
-  flex-wrap: wrap;
   margin-top: 25vh;
   width: 100%;
   height: 500px;
 }
+
 .title {
+  padding-top: 5vh;
   font-size: 3.625rem;
   line-height: 3.8rem;
   letter-spacing: -0.125rem;
@@ -27,11 +45,18 @@
 @media only screen and (min-width: 47.5em) {
   .introBox-left {
     width: 50%;
-    padding: 0 0.938rem;
+    padding: 0 2rem;
   }
   .introBox-right {
     width: 50%;
-    padding: 0 0.938rem;
+    padding: 0 2rem;
+  }
+  .introContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 25vh;
+    width: 100%;
+    height: 500px;
   }
 }
 

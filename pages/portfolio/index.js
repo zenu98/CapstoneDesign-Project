@@ -1,10 +1,15 @@
 import Detail from "@/components/Detail";
 import path from "path";
 import fs from "fs/promises";
+
 const PortpoiloPage = (props) => {
   const { clients } = props;
 
-  return <Detail description={clients[1].description} />;
+  return (
+    <>
+      <Detail description={clients[1].description} />
+    </>
+  );
 };
 
 export async function getStaticProps() {

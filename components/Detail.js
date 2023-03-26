@@ -1,11 +1,13 @@
 import classes from "./Detail.module.css";
 import Image from "next/image";
-import dummyBackground from "../public/img/dummybg1.jpg";
+
 import { useState, useEffect } from "react";
 
 const Detail = (props) => {
   const [pos, setPos] = useState(0);
-
+  const contents = props.contents;
+  const clientId = props.clientId;
+  console.log(contents);
   function onScroll() {
     setPos(window.scrollY);
   }
@@ -14,11 +16,11 @@ const Detail = (props) => {
   }, []);
   return (
     <div>
-      <div>
+      <div className={classes.background}>
         <Image
-          src={dummyBackground}
+          src={`${contents[0]}`}
           alt="dummy"
-          className={classes.background}
+          fill
           style={{ transform: `translateY(${pos / 2}px)` }}
         />
       </div>
@@ -33,23 +35,48 @@ const Detail = (props) => {
         <div className={`${classes["introContainer"]}`}>
           <div className={`${classes["introBox-left"]}`}>
             <h2>Introduction</h2>
-            <div className={classes.text}>{props.description}</div>
+            <div className={classes.text}>{props.introduction}</div>
             <div>
               <h2>Technologies Used</h2>
             </div>
           </div>
           <div className={`${classes["introBox-right"]}`}>
-            <p className={classes.text}>
-              Habibi is an ever-growing art project within Web3, started by the
-              one and only . This all began with one word, Habibi. Habibi means
-              so many things. It’s a word exchanged between passionate lovers,
-              and it’s a word exchanged between caring friends. Simply put, it
-              means “dearest” or “darling”. But that’s really selling it short.
-            </p>
+            <p className={classes.introText}>{props.introText}</p>
           </div>
         </div>
-        <div>
-          <Image src={dummyBackground} alt="dummy" className={classes.imgone} />
+        <div className={classes.imgone}>
+          <Image
+            src={`${contents[1]}`}
+            alt="dummy"
+            fill
+            style={{ borderRadius: "10px" }}
+          />
+        </div>
+        <div className={classes.imagethree}>
+          <div className={`${classes["imagethree-content"]}`}>
+            <Image
+              src={`${contents[2]}`}
+              alt="dummy"
+              fill
+              style={{ borderRadius: "10px" }}
+            />
+          </div>
+          <div className={`${classes["imagethree-content"]}`}>
+            <Image
+              src={`${contents[3]}`}
+              alt="dummy"
+              fill
+              style={{ borderRadius: "10px" }}
+            />
+          </div>
+          <div className={`${classes["imagethree-content"]}`}>
+            <Image
+              src={`${contents[4]}`}
+              alt="dummy"
+              fill
+              style={{ borderRadius: "10px" }}
+            />
+          </div>
         </div>
       </div>
     </div>

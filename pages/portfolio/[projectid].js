@@ -5,8 +5,16 @@ import fs from "fs/promises";
 const SelectedPortpoiloPage = (props) => {
   const { loadedClient } = props;
 
-  return <Detail description={loadedClient.description} />;
+  return (
+    <Detail
+      introduction={loadedClient.introduction}
+      introText={loadedClient.introText}
+      contents={loadedClient.contents}
+      clientId={loadedClient.id}
+    />
+  );
 };
+
 export async function getStaticProps(context) {
   const { params } = context;
 

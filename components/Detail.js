@@ -18,6 +18,7 @@ const Detail = (props) => {
     <div>
       <div className={classes.background}>
         <Image
+          className={classes.mainimag}
           src={`${contents[0]}`}
           alt="dummy"
           fill
@@ -38,46 +39,59 @@ const Detail = (props) => {
             <div className={classes.text}>{props.introduction}</div>
             <div>
               <h2>Technologies Used</h2>
+              <ul className={classes.usedTech}>
+                <li className={`${classes["usedTech-contents"]}`}>123123</li>
+                <li className={`${classes["usedTech-contents"]}`}>123123</li>
+                <li className={`${classes["usedTech-contents"]}`}>123123</li>
+                <li className={`${classes["usedTech-contents"]}`}>123123</li>
+                <li className={`${classes["usedTech-contents"]}`}>123123</li>
+              </ul>
             </div>
           </div>
           <div className={`${classes["introBox-right"]}`}>
             <p className={classes.introText}>{props.introText}</p>
           </div>
         </div>
+
         <div className={classes.imgone}>
           <Image
+            width={2500}
+            height={500}
+            className={classes.imgs}
             src={`${contents[1]}`}
             alt="dummy"
-            fill
             style={{ borderRadius: "10px" }}
           />
         </div>
-        <div className={classes.imagethree}>
-          <div className={`${classes["imagethree-content"]}`}>
-            <Image
-              src={`${contents[2]}`}
-              alt="dummy"
-              fill
-              style={{ borderRadius: "10px" }}
-            />
+
+        {clientId === "c1" && (
+          <div className={classes.imagethree}>
+            <div className={`${classes["imagethree-content"]}`}>
+              <Image
+                src={`${contents[2]}`}
+                alt="dummy"
+                fill
+                style={{ borderRadius: "10px" }}
+              />
+            </div>
+            <div className={`${classes["imagethree-content"]}`}>
+              <Image
+                src={`${contents[3]}`}
+                alt="dummy"
+                fill
+                style={{ borderRadius: "10px" }}
+              />
+            </div>
+            <div className={`${classes["imagethree-content"]}`}>
+              <Image
+                src={`${contents[4]}`}
+                alt="dummy"
+                fill
+                style={{ borderRadius: "10px" }}
+              />
+            </div>
           </div>
-          <div className={`${classes["imagethree-content"]}`}>
-            <Image
-              src={`${contents[3]}`}
-              alt="dummy"
-              fill
-              style={{ borderRadius: "10px" }}
-            />
-          </div>
-          <div className={`${classes["imagethree-content"]}`}>
-            <Image
-              src={`${contents[4]}`}
-              alt="dummy"
-              fill
-              style={{ borderRadius: "10px" }}
-            />
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

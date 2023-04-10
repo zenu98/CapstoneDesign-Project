@@ -20,7 +20,12 @@
       "description": "김미르님의 작품",
       "introduction": "김미르님의 소개",
       "introText": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
-      "contents": ["/img/dummybg2.png", "/img/dummybg2.png"]
+      "contents": [
+        "/img/dummybg1.jpg",
+        "/img/dummybg4.jpg",
+        "/img/dummybg2.png",
+        "/img/dummybg3.jpg"
+      ]
     },
     {
       "id": "c3",

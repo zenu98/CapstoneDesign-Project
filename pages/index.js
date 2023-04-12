@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import Link from "next/link";
 import path from "path";
 import fs from "fs/promises";
@@ -5,6 +7,10 @@ function HomePage(props) {
   const { clients } = props;
   return (
     <div>
+      <Head>
+        <title>NextJS Capstone Design</title>
+        <meta name="description" content="SKHU Capstone Design Project" />
+      </Head>
       <h1>The Home Page</h1>
       <ul>
         {clients.map((client) => (

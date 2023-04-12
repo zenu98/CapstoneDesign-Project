@@ -7,6 +7,7 @@
 
 .mainimag {
   object-fit: cover;
+  transition: 5 ease;
 }
 
 .imgs {
@@ -15,11 +16,17 @@
 }
 
 .imgone {
-  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0 0.469rem;
   overflow: hidden;
-
-  padding: 0.65rem;
-  border-radius: 10px;
+  border-radius: 1.25rem;
+}
+.imgone img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0px auto;
 }
 
 .background {
@@ -54,17 +61,43 @@
 .introBox-right {
   word-break: break-all;
 }
-.imagethree {
-  display: flex;
-  margin-top: 4rem;
-  justify-content: space-around;
+
+@media only screen and (min-width: 31.25em) {
+  .imagethree {
+    display: flex;
+
+    margin-top: 4rem;
+  }
+  .imagethree-content {
+    padding: 0 1.407rem;
+    width: 33.33%;
+  }
+  .imagethree-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0px auto;
+  }
 }
-.imagethree-content {
-  background-size: cover;
-  position: relative;
-  width: 25rem;
-  height: 20rem;
+@media only screen and (max-width: 31.25em) {
+  .imagethree {
+    display: flex;
+    padding: 0 0.469rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .imagethree-content {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .imagethree-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0px auto;
+  }
 }
+
 .usedTech {
   display: flex;
   flex-wrap: wrap;

@@ -1,17 +1,19 @@
 import Detail from "@/components/Detail";
 import path from "path";
 import fs from "fs/promises";
-
+import Head from "next/head";
+import { Fragment } from "react";
 const SelectedPortpoiloPage = (props) => {
   const { loadedClient } = props;
 
   return (
-    <Detail
-      introduction={loadedClient.introduction}
-      introText={loadedClient.introText}
-      contents={loadedClient.contents}
-      clientId={loadedClient.id}
-    />
+    <Fragment>
+      <Head>
+        <title>SKHU Capstone Design-{loadedClient.name}</title>
+        <meta name="description" content={loadedClient.description} />
+      </Head>
+      <Detail loadedClient={loadedClient} />
+    </Fragment>
   );
 };
 

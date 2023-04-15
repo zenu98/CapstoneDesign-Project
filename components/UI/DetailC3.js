@@ -2,16 +2,9 @@ import classes from "../Detail.module.css";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 const DetailC1 = (props) => {
-  const [pos, setPos] = useState(0);
+  const pos = props.pos;
   const loadedClient = props.loadedClient;
-  console.log(loadedClient);
 
-  function onScroll() {
-    setPos(window.scrollY);
-  }
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-  }, []);
   return (
     <div>
       <div className={classes.background}>

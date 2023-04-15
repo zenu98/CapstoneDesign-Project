@@ -1,17 +1,10 @@
 import classes from "../Detail.module.css";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-const DetailC1 = (props) => {
-  const [pos, setPos] = useState(0);
-  const loadedClient = props.loadedClient;
-  console.log(loadedClient);
 
-  function onScroll() {
-    setPos(window.scrollY);
-  }
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-  }, []);
+const DetailC1 = (props) => {
+  const loadedClient = props.loadedClient;
+  const pos = props.pos;
+
   return (
     <div>
       <div className={classes.background}>
@@ -20,7 +13,7 @@ const DetailC1 = (props) => {
           src={`${loadedClient.contents[0]}`}
           alt="dummy"
           fill
-          style={{ transform: `translateY(${pos / 2}px)` }}
+          style={{ transform: `translateY(${pos / 1}px)` }}
         />
       </div>
       <div

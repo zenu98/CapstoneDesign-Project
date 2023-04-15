@@ -3,16 +3,19 @@ import path from "path";
 import fs from "fs/promises";
 import Head from "next/head";
 import { Fragment } from "react";
+import Layout from "@/components/UI/layout/Layout";
 const SelectedPortpoiloPage = (props) => {
   const { loadedClient } = props;
 
   return (
     <Fragment>
-      <Head>
-        <title>SKHU Capstone Design-{loadedClient.name}</title>
-        <meta name="description" content={loadedClient.description} />
-      </Head>
-      <Detail loadedClient={loadedClient} />
+      <Layout>
+        <Head>
+          <title>SKHU Capstone Design-{loadedClient.name}</title>
+          <meta name="description" content={loadedClient.description} />
+        </Head>
+        <Detail loadedClient={loadedClient} />
+      </Layout>
     </Fragment>
   );
 };

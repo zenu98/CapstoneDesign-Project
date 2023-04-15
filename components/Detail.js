@@ -1,17 +1,31 @@
 import DetailC1 from "./UI/DetailC1";
 import DetailC2 from "./UI/DetailC2";
 import DetailC3 from "./UI/DetailC3";
+import { useState, useLayoutEffect, useMemo } from "react";
 
 const Detail = (props) => {
   const loadedClient = props.loadedClient;
   const id = loadedClient.id;
-  console.log(id);
+
+  const [pos, setPos] = useState(0);
+
+  function onScroll() {
+    setPos(window.scrollY);
+    console.log("스크롤이벤트");
+  }
+
+  useLayoutEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
 
   return (
     <>
-      {id === "c1" && <DetailC1 loadedClient={loadedClient} />}
-      {id === "c2" && <DetailC2 loadedClient={loadedClient} />}
-      {id === "c3" && <DetailC3 loadedClient={loadedClient} />}
+      {id === "c1" && <DetailC1 loadedClient={loadedClient} pos={pos} />}
+      {id === "c2" && <DetailC2 loadedClient={loadedClient} pos={pos} />}
+      {id === "c3" && <DetailC3 loadedClient={loadedClient} pos={pos} />}
     </>
   );
 };

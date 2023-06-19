@@ -1,18 +1,20 @@
 .header {
-  height: 6rem;
+  height: 4rem;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0px;
   width: 100%;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
   z-index: 5;
+  border-bottom: 1px solid black;
 }
 .header_down {
+  position: fixed;
   top: -6rem;
 }
 
@@ -28,23 +30,35 @@
   margin: 0 var(--size-4);
 }
 
-.header a {
-  color: var(--color-grey-100);
-  font-size: var(--size-4);
+.logo_image {
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 90px;
+  height: 60px;
+  position: relative !important;
 }
-
-.header a:hover,
-.header a:active,
-.header a.active {
-  color: var(--color-grey-200);
+.link_style {
+  text-decoration: none;
+  margin-right: 30px;
+  font-family: "FSMeridian";
+  font-size: 20px;
 }
-
+.link_style:hover {
+  color: gray;
+}
+.black {
+  color: black;
+}
+.hotpink {
+  color: rgb(221, 36, 67);
+}
 @media (min-width: 768px) {
   .header ul {
     gap: 0.5rem;
   }
+}
 
-  .header a {
-    font-size: var(--size-5);
-  }
+@font-face {
+  font-family: "FSMeridian";
+  src: url("/fonts/FSMeridianTrial-Bold.woff") format("woff");
 }

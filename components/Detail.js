@@ -2,6 +2,7 @@ import DetailC1 from "./UI/DetailC1";
 import DetailC2 from "./UI/DetailC2";
 import DetailC3 from "./UI/DetailC3";
 import { useState, useLayoutEffect, useMemo } from "react";
+import Layout from "./UI/layout/Layout";
 
 const Detail = (props) => {
   const loadedClient = props.loadedClient;

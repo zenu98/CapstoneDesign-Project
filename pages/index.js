@@ -1,8 +1,9 @@
 import Head from "next/head";
-
 import Link from "next/link";
 import path from "path";
 import fs from "fs/promises";
+import MainPage from "@/components/Main/MainPage";
+
 function HomePage(props) {
   const { clients } = props;
   return (
@@ -11,14 +12,14 @@ function HomePage(props) {
         <title>NextJS Capstone Design</title>
         <meta name="description" content="SKHU Capstone Design Project" />
       </Head>
-      <h1>The Home Page</h1>
-      <ul>
+      <MainPage />
+      {/* <ul>
         {clients.map((client) => (
           <li key={client.id}>
             <Link href={`/portfolio/${client.id}`}>{client.name}</Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }

@@ -1,38 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SKHU Capstone-Design Webpage
+Next.js 기반 웹페이지
 
-## Getting Started
+## 프로젝트 정보
+개발기간: 2023.03 ~ 2023.06
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 프로젝트 소개
+조원들의 작품을 수록할 수 있는 포트폴리오 형식의 웹페이지를 Next.js의 몇가지 기능을 사용하며 제작
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 기술 스택
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### ✔️Frond-end
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black"><img src="https://img.shields.io/badge/Css-1572B6?style=for-the-badge&logo=Css&logoColor=white"><img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=Redux&logoColor=purple"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white">
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 화면구성
 
-## Learn More
+- ### 메인페이지
+![web1](https://github.com/zenu98/201913001/assets/90780629/77bac2cc-55b0-421b-8301-30c6ff4a385c)
+![web2](https://github.com/zenu98/201913001/assets/90780629/1745bd85-b1a4-4ea1-b493-099aecc50994)
 
-To learn more about Next.js, take a look at the following resources:
+세 조원의 작품의 대표 이미지를 저런식으로 디자인 하였고 첫 시작화면일 때 하나씩 서서히 나타나게 애니메이션 효과를 넣었다.
+마우스를 올렸을 때도 동적인 효과를 주었다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- ### 세부페이지
+각 조원분들의 작품과 요구에 따라 각 페이지를 구현하였다.
+- #### 첫번째 작품페이지 
+![web33](https://github.com/zenu98/201913001/assets/90780629/144c092e-06cd-432d-b9cb-d2eeba3145f3)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- #### 두번째 작품페이지 
+![Honeycam 2023-08-04 20-29-56](https://github.com/zenu98/201913001/assets/90780629/fc1c1df5-6011-4c5f-a4dd-643ea9ad29bf)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+- #### 세번째 작품페이지 
+![Honeycam 2023-08-04 20-45-19](https://github.com/zenu98/201913001/assets/90780629/0547bcb6-ab28-4b81-aba5-b972178ec6eb)
+
